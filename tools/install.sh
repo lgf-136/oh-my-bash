@@ -42,6 +42,7 @@ main() {
     if [ $(whoami) = 'root' ];then
       OSH=/$(whoami)/.oh-my-bash
     fi
+    echo $OSH
   fi
 
   if [ -d "$OSH" ]; then
