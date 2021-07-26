@@ -38,9 +38,11 @@ main() {
   fi
 
   if [ ! -n "$OSH" ]; then
-    OSH=$HOME/.oh-my-bash
+    #OSH=$HOME/.oh-my-bash
     if [ $(whoami) = 'root' ];then
       OSH=/$(whoami)/.oh-my-bash
+    else
+      OSH=$HOME/.oh-my-bash
     fi
     echo $OSH
   fi
