@@ -37,6 +37,10 @@ main() {
      fi
   fi
 
+  #if [ ! -n "$OSH" ]; then
+  #  OSH=$HOME/.oh-my-bash
+  #fi
+  #--------------------------------lgf--------------------------------------------
   if [ ! -n "$OSH" ]; then
     #OSH=$HOME/.oh-my-bash
     if [ $(whoami) = 'root' ];then
@@ -46,7 +50,7 @@ main() {
     fi
     echo $OSH
   fi
-
+  #-------------------------------lgf--------------------------------------------
   if [ -d "$OSH" ]; then
     printf "${YELLOW}You already have Oh My Bash installed.${NORMAL}\n"
     printf "You'll need to remove $OSH if you want to re-install.\n"
